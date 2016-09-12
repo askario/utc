@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% block content %}
+<section>
+	<div class="container">
+	
+
+      <hr class="featurette-divider">
+
+      
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading" ><a href="/news/get/{{new.id}}">{{ news.news_title }}</a></h2>
+          <p class="muted">{{ news.news_text  }}</p>
+       
+        </div>
+        <div class="col-md-5">
+          <span class="fa-stack fa-4x">
+					<a href="/news/addlike/{{ news.id }}"><i class = "fa fa-thumbs-up"></i></a>
+					<i>{{ news.news_like }}</i>
+
+              </span>
+        </div>
+        <br>
+        <h4>{{ news.news_date }}</h4>
+
+      </div>
+      
+
+      <hr class="featurette-divider">
+      <div class = "large-offset-1 large-8 columns">
+    {% for comment in comments %}
+      <p>{{ comment.comments_text }}</p>
+    {% endfor %}
+
+    {% if username %}
+    <form action = "/news/addcomment/{{news.id}}/" method="post">
+    {% csrf_token %}
+    {{  form  }}
+    <input type="submit" class="button" value="Добавить комментарий">
+    </form>
+    {% endif%}
+
+      </div>
+
+	</div>
+</section>
+{% endblock %}

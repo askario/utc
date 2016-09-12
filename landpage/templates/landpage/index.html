@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Social Media -->
+
+<div id="social-buttons" class="hidden-print">
+    <div class="container">
+        <div class="row text center">
+                    
+                    <ul class="list-inline social-buttons">
+                        
+                    <li><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+            
+                    <li><a href="http://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                  
+         </div>
+    </div>
+</div>
+
+
+
+<!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Охрана труда</h2>
+                <h3 class="section-subheading text-muted">Обучение руководителей и специалистов</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            {% for header in headers %}
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="{{ header.image }}"></i>
+                </span>
+                <h4 class="service-heading">{{ header.name }}</h4>
+                <p class="text-muted">{{ header.text }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Courses Section -->
+
+<section id="portfolio" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Направления подготовки  </h2>
+                <h3 class="section-subheading text-muted">Нажмите на интересующее вас направление</h3>
+            </div>
+        </div>
+        <div class="row">
+            
+            {% for direction in directions %}
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="http://www.academicstoday.ca/#portfolioModal1" class="portfolio-link" data-toggle="modal" onclick="ajax_popup_course_preview(1);" ;="">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    
+                    <img src="{{ direction.image }}" class="img-responsive" alt="">
+                    
+                    
+                        </a>
+                <div class="portfolio-caption">
+                    <h4>{{ direction.name }}</h4>
+                    
+                </div>
+            </div>
+            {% endfor %}
+    
+        </div>
+    </div>
+</section>
+
+
+
+<!--              -->
+<!-- Team Section -->
+<!--              -->
+<section id="team" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Наши преподаватели</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+            {% for lector in lectors %}
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img src="{{ lector.image }}" class="img-responsive img-circle" alt="">
+                    <h4>{{ lector.name }} </h4>
+                    <h4>{{ lector.surname }} </h4>
+                    <p class="text-muted">{{ lector.rang }}</p>
+                
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+              
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Clients Aside -->
+<aside class="clients" style = "min-height: 300px;width: 100%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Наши Клиенты</h2>
+            </div>
+            {% for client in clients %}
+            <div class="col-md-3 col-sm-6">
+                <a href="{{ client.ref }}">
+                    <img src="{{ client.image }}" class="img-responsive img-centered" max-height =50 width = 200 alt="" duplexsoft="" overflow:auto>
+                </a>
+            </div>
+            {% endfor %}
+            
+            
+        </div>
+    </div>
+</aside>
+
+
+
+<!-- Contact Us Section -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Свяжитесь с нами</h2>
+                <h3 class="section-subheading text-muted">Все сообщения будут прочитаны администратором</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form name="sentMessage" id="contactForm" novalidate="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" id="id_name" maxlength="127" name="name" placeholder="Введите свое имя" type="text">
+                                <p id="id_contact_name_danger" class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="id_email" maxlength="254" name="email" placeholder="Введите Email" type="email">
+                                <p id="id_contact_email_danger" class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="id_phone" maxlength="63" name="phone" placeholder="Введите телефон" type="text">
+                                <p id="id_contact_phone_danger" class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea cols="40" id="id_message" name="message" rows="10"></textarea>
+                                <p id="id_contact_message_danger" class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                               
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button onclick="ajax_send_message();" id="id_send_msg_btn" name="send_msg_btn" type="button" class="btn btn-xl">Отправить сообщение</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% block content %}
+<section id = "mp1">
+	<div class="container">
+		{% for new in news %}
+
+      <hr class="featurette-divider">
+
+      
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading" ><a href="/news/get/{{new.id}}">{{ new.news_title }}</a></h2>
+          <p class="muted">{{ new.news_text  }}</p>
+       
+        </div>
+        <div class="col-md-5">
+          <span class="fa-stack fa-4x">
+					<a href="/news/addlike/{{ new.id }}"><i class = "fa fa-thumbs-up"></i></a>
+					<i>{{ new.news_like }}</i>
+
+              </span>
+        </div>
+        <br>
+        <h4>{{ new.news_date }}</h4>
+
+      </div>
+      {% endfor %}
+
+      <hr class="featurette-divider">
+
+      <div class = "row">
+
+<ul class = "pagination">
+    {% if news.has_previous %}
+    <li class = "arrow"><a href="/page/{{ news.previous_page_number }}/">&laquo;</a></li>
+    {% else %}
+    <li class = "arrow unavailable"><a href="">&laquo;</a></li>
+    {% endif %}
+    {% for page in news.paginator.page_range %}
+    {% if page == news.number %}
+    <li class = "current"><a href="/page/{{ page }}/">{{ page }}</a></li>
+    {% else %}
+    <li><a href="/page/{{ page }}/">{{ page }}</a></li>
+    {% endif %}
+    {% endfor %}
+    {% if news.has_next %}
+    <li class = "arrow"><a href="/page/{{news.next_page_number}}/">&laquo;</a></li>
+    {% else %}
+    <li class = "arrow unavailable"><a href="">&laquo;</a></li>
+    {% endif %}
+</ul>
+
+</div>
+	</div>
+</section>
+{% endblock %}

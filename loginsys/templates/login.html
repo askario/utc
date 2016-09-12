@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block login %}
+
+<section>
+	<div class="container">
+	<hr class="featurette-divider">
+		  <form class="form-signin" action="/auth/login/" method = "post" >
+        <h2 class="form-signin-heading">Пожалуйста войдите</h2>
+        {% csrf_token %}
+        <label for="username" class="sr-only">Имя пользователя</label>
+        <input type="text" id="username" class="form-control" name = "username" placeholder="Имя пользователя" required autofocus>
+        <label for="password" class="sr-only">Пароль</label>
+        <input type="password" id="password" class="form-control" name ="password" placeholder="Пароль" required>
+        {% if login_error %}
+        <label for="" class ="error">{{ login_error }}</label>
+        {% endif %}
+       
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+
+      </form>
+				<br>
+              <a href="/auth/register/"><button class="btn btn-lg btn-primary btn-block" >Регистрация</button></a>
+
+	<hr class="featurette-divider">
+	</div>
+</section>
+
+
+{% endblock %}

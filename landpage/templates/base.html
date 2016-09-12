@@ -1,0 +1,471 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://www.academicstoday.ca/#team -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="We provide an open-source platform for online course-based learning.  Our goal is to provide a university level education for everyone the planet.">
+        <meta name="keywords" content="Educational, teaching, courses, free, learning, courseware, course, online learning, online-learning, youtube lectures, lectures, lecture, exam, exams, essay, essays, tests, tests, quiz, quizzes">
+        <link type="text/plain" rel="author" href="http://www.academicstoday.ca/humans.txt">
+        <link rel="icon" href="http://www.academicstoday.ca/static/img/favicon.ico">
+        <link rel="shortcut icon" href="http://www.academicstoday.ca/static/img/favicon.ico">
+        <link rel="apple-touch-icon" href="http://www.academicstoday.ca/static/img/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://www.academicstoday.ca/static/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://www.academicstoday.ca/static/img/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="http://www.academicstoday.ca/static/img/apple-touch-icon-144x144.png">
+        <meta name="msvalidate.01" content="0D845C735BD4C19611239D1FDD802C63">
+        <meta name="yandex-verification" content="7db7d6658b4bc2a7">
+        <title>Тренинговый центр уфанет</title>
+
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+        </script>
+
+            <link rel="stylesheet" href="{% static './jquery-ui.css' %}">
+        
+            <link rel="stylesheet" href="{% static './bootstrap.min.css' %}">
+        
+            <link rel="stylesheet" href="{% static './font-awesome.css' %}">
+        
+            <link rel="stylesheet" href="{% static './font-awesome.min.css' %}">
+        
+            <link rel="stylesheet" href="{% static './agency.css' %}">
+        
+
+        
+            <script async="" src="{% static './analytics.js' %}"></script><script id="twitter-wjs" src="{% static './widgets.js' %}"></script><script src="{% static './jquery.min.js' %}"></script>
+        
+            <script src="{% static './jquery.tablesorter.js' %}"></script>
+        
+            <script src="{% static './jquery-ui.js' %}"></script>
+        
+            <script src="{% static './jquery.easing.min.js' %}"></script>
+        
+            <script src="{% static './bootstrap.min.js' %}"></script>
+        
+            <script src="{% static './bootstrap.js' %}"></script>
+        
+            <script src="{% static './classie.js' %}"></script>
+        
+            <script src="{% static './cbpAnimatedHeader.js' %}"></script>
+        
+            <script src="{% static './cbpAnimatedHeader.min.js' %}"></script>
+        
+            <script src="{% static './jqBootstrapValidation.js' %}"></script>
+        
+            <script src="{% static './agency.js' %}"></script>
+        
+
+        <link href="{% static './css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static './css(1)' %}" rel="stylesheet" type="text/css">
+        <link href="{% static './css(2)' %}" rel="stylesheet" type="text/css">
+        <link href="{% static './css(3)' %}" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <script type="text/javascript" charset="utf-8" async="" src="{% static './button.e17e434ecfb12438c31724873d54e4cd.js' %}"></script></head>
+
+    <body id="page-top" class="index">
+        <!-- Navigation -->
+        <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="/">Тренинговый центр Уфанет</a>
+        </div>
+                
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden active">
+                    <a href="http://www.academicstoday.ca/#page-top"></a>
+                </li>
+                <li class="">
+                    <a class="page-scroll" href="/about/#about">О компании</a>
+                </li>
+                <li class="">
+                    <a class="page-scroll" href="/#portfolio">Направления </a>
+                </li>
+                <li class="">
+                    <a class="page-scroll" href="/#team">Лекторы</a>
+                </li>
+                <li class="">
+                    <a class="page-scroll" href="/about/#contacts">Контакты</a>
+                </li>
+                <li class="">
+                    <a class="page-scroll" href="/news/all/">Новости</a>
+                </li>
+
+                {% if username %}
+                <li class="">
+                    <a class="page-scroll" href="/auth/logout/">Выйти {{ username }}</a>
+                </li>
+
+                {% else %}
+                 <li class="">
+                    <a class="page-scroll" href="/auth/login/">Войти {{ username }}</a>
+                </li>
+                {% endif %}
+                
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+        <!-- CSRF Token -->
+        <input type="hidden" name="csrfmiddlewaretoken" value="bWnc2fTG8VVVZiICPGHdelZrtlEXbqmf">
+
+        <!-- MAIN -->
+        
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-lead-in">
+                Добро пожаловать!
+            </div>
+            <div class="intro-heading">
+                Время начать обучение
+            </div>
+            <a href="/auth/register/" class="btn btn-xl">
+                Регистрация
+            </a>
+        </div>
+    </div>
+</header>
+
+
+{% block content %}
+
+{% endblock %}
+
+{% block login %}
+{% endblock %}
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+               
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">   
+                    <li><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="http://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!-- Modal -->
+<div id="ajax_response_course_preview" name="ajax_response_course_preview">
+<div class="modal fade" id="course_preview_modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:77%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h2 class="modal-title" id="myModalLabel">Preview</h2>
+            </div>
+            <div class="modal-body">
+                <!-- Course Picture -->
+                <div class="col-lg-12">
+                    
+                    <img src="./Academics Today_files/Screen_Shot_2015-06-01_at_6.59.15_PM.png" height="100%" width="100%">
+                    
+                </div>
+                <!-- Course Info -->
+                <div class="col-lg-12 text-left">
+                    <h2>What is Urology<br>
+                        
+                        <small>What is Urology</small>
+                        
+                    </h2>
+                    
+                    <p>Learn about urology and stuff</p><p>
+                    </p><p>Durration: Jan. 1, 2015 to Jan. 1, 2015</p>
+                </div>
+                <!-- /.Course Info -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" form="course_preview_form" onclick="">
+                    <i class="fa fa-times"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+<!-- end modal --></div></div>
+<div id="ajax_response_login"></div>
+<div id="ajax_response_register"></div>
+<!-- end modal -->
+
+<!----------------------------------------------------------------------------->
+
+
+<script>
+/**
+ *  Function will call AJAX function to load the particular course preview.
+ */
+function ajax_popup_course_preview(course_id)
+{
+    var url = 'course_preview_modal';
+    $.ajax( url, {
+        data: {
+           'course_id': course_id,
+           'csrfmiddlewaretoken': 'bWnc2fTG8VVVZiICPGHdelZrtlEXbqmf',
+        },
+        type: 'post',
+        success: function(result) {
+            // success code execution here
+            $('#ajax_response_course_preview').html(result); // Update UI.
+            $('#course_preview_modal').modal();               // Unhide view.
+        },
+        error: function(xhr,status,error) {
+            // error code here
+        },
+        complete: function(xhr,status) {
+            // completion code here
+       }
+    });
+}
+        
+/**
+ *  Function will call AJAX function to load the login modal.
+ */
+function ajax_popup_login()
+{
+    var url = 'login_modal';
+            
+    $.ajax( url, {
+        data: {
+           'csrfmiddlewaretoken': 'bWnc2fTG8VVVZiICPGHdelZrtlEXbqmf',
+        },
+        type: 'post',
+        success: function(result) {
+            // success code execution here
+            $('#ajax_response_login').html(result); // Update UI.
+            $('#login_modal').modal();               // Unhide view.
+        },
+        error: function(xhr,status,error) {
+            // error code here
+        },
+        complete: function(xhr,status) {
+            // completion code here
+        }
+    });
+}
+        
+/**
+ *  Function will call AJAX function to load the register.
+ */
+function ajax_popup_register()
+{
+    var url = 'register_modal';
+            
+    $.ajax( url, {
+        data: {
+           'csrfmiddlewaretoken': 'bWnc2fTG8VVVZiICPGHdelZrtlEXbqmf',
+        },
+        type: 'post',
+        success: function(result) {
+            // success code execution here
+            $('#ajax_response_register').html(result); // Update UI.
+            $('#register_modal').modal();               // Unhide view.
+        },
+        error: function(xhr,status,error) {
+            // error code here
+        },
+        complete: function(xhr,status) {
+            // completion code here
+        }
+    });
+}
+
+/**
+ *  Sends a message.
+ */
+/**
+ *  Function will call AJAX function to load the register.
+ */
+function ajax_send_message()
+{
+    $('#id_send_msg_btn').prop("disabled", true);
+    $.ajax( 'save_contact_us_message', {
+           data: {
+                'csrfmiddlewaretoken': 'bWnc2fTG8VVVZiICPGHdelZrtlEXbqmf',
+                'name': $("#id_name").val(),
+                'email': $("#id_email").val(),
+                'phone': $("#id_phone").val(),
+                'message': $("#id_message").val(),
+                'captcha_0': $("#id_captcha_0").val(),
+                'captcha_1': $("#id_captcha_1").val(),
+           },
+           type: 'post',
+           success: function(result) {
+                // success code execution here
+                if (result.status == 'success')
+                {
+                    $('#id_contact_name_danger').html('');
+                    $('#id_contact_email_danger').html('');
+                    $('#id_contact_phone_danger').html('');
+                    $('#id_contact_message_danger').html('');
+                    $('#id_contact_captcha_danger').html('');
+                    alert("Message sent!");
+                    window.location = ''
+                }
+                else
+                {
+                    refresh_captcha();
+                    var data = $.parseJSON(result.message)
+                    var name_msg = '';
+                    var email_msg = '';
+                    var phone_msg = '';
+                    var message_msg = '';
+                    var captcha_msg = '';
+                    for (var key in data) {
+                        if (data.hasOwnProperty(key)) {
+                            if (key == 'name')
+                            {
+                                name_msg = data[key];
+                            }
+                            if (key == 'email')
+                            {
+                                email_msg = data[key];
+                            }
+                            if (key == 'phone')
+                            {
+                                phone_msg = data[key];
+                            }
+                            if (key == 'message')
+                            {
+                                message_msg = data[key];
+                            }
+                            if (key == 'captcha')
+                            {
+                                captcha_msg = data[key];
+                            }
+                        }
+                    }
+           
+                    $('#id_contact_name_danger').html(name_msg);
+                    $('#id_contact_email_danger').html(email_msg);
+                    $('#id_contact_phone_danger').html(phone_msg);
+                    $('#id_contact_message_danger').html(message_msg);
+                    $('#id_contact_captcha_danger').html(captcha_msg);
+                }
+           },
+           error: function(xhr,status,error) {
+                // error code here
+           },
+           complete: function(xhr,status) {
+                // completion code here
+                $('#id_send_msg_btn').prop("disabled", false);
+           }
+    });
+}
+
+
+/**
+ * The following function will cause the captcha to refresh.
+ */
+function refresh_captcha()
+{
+    var url = location.protocol + "//" + window.location.hostname + ":" + location.port + "/captcha/refresh/";
+    
+    // Make the AJAX-call
+    $.getJSON(url, {}, function(json) {
+              //var $form = $('modal-body').parents('register_form');
+              var $form = $('#contactForm');
+              $form.find('input[name="captcha_0"]').val(json.key);
+              $form.find('img.captcha').attr('src', json.image_url);
+              });
+              return false;
+}
+
+// Add refresh button after field (this can be done in the template as well)
+$('img.captcha').after(
+    $('<a href="#void" class="captcha-refresh">Refresh</a>')
+);
+
+// Click-handler for the refresh-link
+$('.captcha-refresh').click(function(){
+    refresh_captcha();
+});
+</script>
+
+
+<!-- Ads -->
+<br>
+<div class="row">
+    <div class="col-lg-12">
+        <div style="text-align: center;">
+            <a href="https://vk.com/id202840244">Аскар Газизов</a>
+        </div>
+    </div>
+</div>
+<!-- /.Ads-->
+
+
+
+
+        <!-- Footer -->
+        
+            <script src="{% static './jquery.min.js' %}"></script>
+        
+            <script src="{% static './jquery.tablesorter.js' %}"></script>
+        
+            <script src="{% static './jquery-ui.js' %}"></script>
+        
+            <script src="{% static './jquery.easing.min.js' %}"></script>
+        
+            <script src="{% static './bootstrap.min.js' %}"></script>
+        
+            <script src="{% static './bootstrap.js' %}"></script>
+        
+            <script src="{% static './classie.js' %}"></script>
+        
+            <script src="{% static './cbpAnimatedHeader.js' %}"></script>
+        
+            <script src="{% static './cbpAnimatedHeader.min.js' %}"></script>
+        
+            <script src="{% static './jqBootstrapValidation.js' %}"></script>
+        
+            <script src="{% static './agency.js' %}"></script>
+        
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+             ga('create', 'UA-64640228-1', 'auto');
+             ga('send', 'pageview');
+        </script>
+        <!-- /.Google Analytics -->
+    
+
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" src="./saved_resource.html"></iframe></body></html>
